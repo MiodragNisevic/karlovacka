@@ -1,12 +1,13 @@
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
-from .models import Post
+from .models import Post, Phone
 
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     # lte means less than or equal
-    return render(request, 'blog/post_list.html', {'posts': posts})
+    phones = Phone.objects.all()
+    return render(request, 'blog/post_list.html', {'posts': posts, 'phones': phones})
 
 
 def post_detail(request, pk):
