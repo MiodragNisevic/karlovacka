@@ -1,4 +1,7 @@
-
+body {
+    height:100%;
+    background: linear-gradient(-50deg, #c2c8ff, #ffffc6) no-repeat;
+}
 
 .page-header {
     background-color: #3346b4;
@@ -7,9 +10,10 @@
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
+    color: #ffbc10;
     font-size: 36pt;
     text-decoration: none;
+    /*margin-left: 10%;*/
 }
 
 .content {
@@ -44,10 +48,30 @@ h1, h2, h3, h4 {
 }
 
 .post h1 a, .post h1 a:visited {
-    color: #000000;
+    color: #3346b4;
+}
+
+.published-date {
+    color: #8e8e8e;
+}
+
+
+
+/* CSS za vazne telefone */
+
+.vazniTelefoni {
+    color: #3346b4;
+}
+
+.panel-default {
+    box-shadow: 5px 5px 2px grey;
 }
 
 .panel-default > .panel-heading-custom {
     background: #ffbc10;
     color: #3346b4;
+}
+
+.panel-default > .panel-heading-custom > .panel-title {
+    font-size: 20px;
 }
