@@ -51,6 +51,14 @@ h1, h2, h3, h4 {
     color: #3346b4;
 }
 
+.detailed-post {
+    margin-bottom: 100%;
+}
+
+.detailed-post h1 {
+    color: #3346b4;
+}
+
 .published-date {
     color: #8e8e8e;
 }
