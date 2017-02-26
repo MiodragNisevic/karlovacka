@@ -14,7 +14,15 @@
 <body>
 
 <div class="page-header">
-    <h1><a href="/">Karlovačka 31</a></h1>
+    {% if user.is_authenticated %}
+    <a href="{% url 'post_new' %}" class="top-menu" style="color: #ffbc10"><span class="glyphicon glyphicon-plus"></span></a>
+    {% endif %}
+    <h1>
+        <a href="/">
+            <span class="glyphicon glyphicon-home" style="margin-right: 20px; margin-left: 20px"></span>
+            Karlovačka 31
+        </a>
+    </h1>
 </div>
 
 <div class="container">

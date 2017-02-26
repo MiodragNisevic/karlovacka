@@ -5,15 +5,58 @@
 
 {% block content %}
 
-    {% for post in posts %}
+   {% for post in posts %}
 
         <div class="post">
-            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+         <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
             <p>{{ post.text|linebreaksbr }}</p>
             <p class="published-date">objavljeno: {{ post.published_date }}</p>
         </div>
 
     {% endfor %}
+
+
+
+{#{% for post in posts %}#}
+{##}
+{#    <div class="post">#}
+{#        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>#}
+{#        <br/>#}
+{#        <p>{{ post.text|linebreaksbr }}</p>#}
+{#        <p class="published-date">objavljeno: {{ post.published_date }}</p>#}
+{#    </div>#}
+{##}
+{##}
+{#{% endfor %}#}
+{##}
+{#    <nav aria-label="Page navigation">#}
+{#        <ul class="pagination">#}
+{#            <span class="step-links">#}
+{#                {% if posts.has_previous %}#}
+{#                    <a href="?page={{ posts.previous_page_number }}"#}
+{#                       aria-label="Previous"#}
+{#                       class="btn btn-default"#}
+{#                    >#}
+{#                        &laquo;#}
+{#                    </a>#}
+{#                {% endif %}#}
+{##}
+{#                <span class="current active">#}
+{#                    Strana {{ posts.number }} od {{ posts.paginator.num_pages }}.#}
+{#                </span>#}
+{##}
+{#                {% if posts.has_next %}#}
+{#                    <a href="?page={{ posts.next_page_number }}"#}
+{#                       aria-label="Next"#}
+{#                       class="btn btn-default"#}
+{#                    >#}
+{#                        &raquo;#}
+{#                    </a>#}
+{#                {% endif %}#}
+{#            </span>#}
+{#        </ul>#}
+{#    <nav aria-label="Page navigation">#}
+
 
 {% endblock %}
 
