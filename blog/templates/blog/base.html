@@ -15,7 +15,12 @@
 
 <div class="page-header">
     {% if user.is_authenticated %}
-        <a href="{% url 'post_new' %}" class="top-menu" style="color: #ffbc10"><span class="glyphicon glyphicon-plus"></span></a>
+        <div class="pull-right">
+            <a href="{% url 'post_new' %}" class="top-menu pull-left" style="color: #ffbc10"><span class="glyphicon glyphicon-plus"></span></a>
+            <a href="{% url 'logout' %}" class="top-menu" style="color: #ffbc10"><span class="glyphicon glyphicon-log-out"></span></a>
+        </div>
+    {% else %}
+        <a href="{% url 'login' %}" class="top-menu" style="color: #ffbc10"><span class="glyphicon glyphicon-log-in"></span></a>
     {% endif %}
     <h1>
         <a href="/">
